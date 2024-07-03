@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  gap: 12px;
+  padding: 48px 32px;
+}
+
+.card {
+  width: 30vw;
+  padding: 0 24px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.card > h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.imageArea {
+  min-height: 372px;
+}

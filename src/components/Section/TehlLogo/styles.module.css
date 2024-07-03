@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.tehlLogo {
+  position: relative;
+
+  width: 752px;
+  height: 620px;
+
+  margin-top: 120px;
+}
+
+.leftHalf,
+.rightHalf {
+  display: flex;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+}
+
+.rightHalf {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+
+  top: 180px;
+  left: 24px;
+}
+
+.leftHalf > p,
+.rightHalf > p {
+  max-width: 380px;
+}
+
+.leftHalf > p {
+  margin-top: 60px;
+  margin-left: 28px;
+}
+
+.rightHalf > p {
+  margin-top: auto;
+  margin-bottom: 60px;
+  margin-right: 28px;
+
+  color: #0d52ff;
+}
+
+.stock {
+  position: absolute;
+  z-index: 0;
+}
+
+.stock.one {
+  bottom: 12px;
+  left: 32px;
+}
+
+.stock.two {
+  left: 280px;
+  top: -20px;
+}
+
+.stock.three {
+  bottom: 12px;
+  right: 280px;
+}
+
+.stock.four {
+  top: 140px;
+  right: 48px;
+}
