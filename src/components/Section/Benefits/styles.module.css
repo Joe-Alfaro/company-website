@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  width: fit-content;
+  max-width: 1400px;
+
+  margin: 0 auto -48px;
+  padding: 0 24px;
+}
+
+.container h2 {
+  font-size: 32px;
+}
+
+.listContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+
+  padding: 0;
+  margin: 0 16px 0 0;
+
+  counter-reset: item;
+
+  list-style: none;
+}
+
+.card {
+  flex: 1 1 0px;
+  padding: 48px 48px 120px 32px;
+
+  counter-increment: item;
+
+  font-size: 24px;
+
+  background-color: white;
+  border: 2px solid #dbdbdb;
+  border-radius: 4px;
+}
+
+.card:before {
+  content: counter(item);
+
+  display: block;
+
+  font-size: 48px;
+  font-weight: bold;
+
+  color: #c2d7ff;
+}
+
+.card:hover {
+  border-color: #0d52ff;
+}
+
+.card:hover:before {
+  color: #0d52ff;
+}
+
+.image {
+  width: 100%;
+  max-width: 440px;
+
+  object-fit: cover;
+}

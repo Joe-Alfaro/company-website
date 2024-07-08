@@ -57,7 +57,6 @@ export default function Steps({ sectionId }: Props): JSX.Element {
       return data.section.contentCollection.items.map((item) => item.sys.id);
     },
   });
-  console.log(contentIds);
 
   const contentIdsString = contentIds?.length
     ? `["${contentIds?.join(`", "`)}"]`
@@ -97,25 +96,17 @@ export default function Steps({ sectionId }: Props): JSX.Element {
     fetchContent();
   }, [contentIdsString]);
 
-  console.log(data);
-
   return (
     <section className={css.container}>
-      <div className={css.card}>
-        <h3>{data?.[0].heading}</h3>
-        <div className={css.imageArea}></div>
-        <p>{data?.[0].text}</p>
-      </div>
-      <div className={css.card}>
-        <h3>{data?.[1].heading}</h3>
-        <div className={css.imageArea}></div>
-        <p>{data?.[1].text}</p>
-      </div>
-      <div className={css.card}>
-        <h3>{data?.[2].heading}</h3>
-        <div className={css.imageArea}></div>
-        <p>{data?.[2].text}</p>
-      </div>
+      <ol className={css.cardContainer}>
+        {data?.map((card) => (
+          <li className={css.card}>
+            <h3>{card.heading}</h3>
+            <div className={css.imageArea}></div>
+            <p>{card.text}</p>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

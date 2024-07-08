@@ -19,15 +19,16 @@ interface ReturnType<R> {
 export default function useContent<T, R = T>(
   query: string,
   options?: Options<T> & { isLazy: true }
-): [() => void, ReturnType<R>];
+): [ReturnType<R>["refetch"], ReturnType<R>];
 export default function useContent<T, R = T>(
   query: string,
   options?: Options<T> & { isLazy?: false }
 ): ReturnType<R>;
+export default function useContent<T, R = T>(query: string): ReturnType<R>;
 export default function useContent<T, R = T>(
   query: string,
-  options?: Options<T>
-): [() => void, ReturnType<R>] | ReturnType<R> {
+  options?: Options<T> & { isLazy?: boolean }
+): [ReturnType<R>["refetch"], ReturnType<R>] | ReturnType<R> {
   const [data, setData] = useState<R | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [errors, setErrors] = useState<string[]>([]);

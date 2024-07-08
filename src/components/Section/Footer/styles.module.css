@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d52ff;
+  padding: 224px 24px 48px;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  max-width: 840px;
+
+  margin-bottom: 96px;
+
+  text-align: center;
+  font-size: 24px;
+}
+
+.content h2 {
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+.container ul {
+  display: flex;
+  gap: 12px;
+
+  list-style-type: none;
+}
+
+.container ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container ul.legalLinks {
+  gap: 0;
+}
+
+.legalLinks li:after {
+  content: "| ";
+  margin: 0 8px;
+}
+
+.legalLinks li:last-child:after {
+  content: "";
+  margin: 0;
+}

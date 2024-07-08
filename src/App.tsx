@@ -47,11 +47,25 @@ function App() {
     return <h1>No content to show right now</h1>;
   }
 
+  const Sections = [
+    Section.Header,
+    Section.TehlLogo,
+    Section.Steps,
+    Section.Benefits,
+    Section.Footer,
+  ] as const;
+
   return (
     <>
-      <Section.Header sectionId={sectionIds[0]} />
-      <Section.TehlLogo sectionId={sectionIds[1]} />
-      <Section.Steps sectionId={sectionIds[2]} />
+      {sectionIds.map((id, index) => {
+        const Component = Sections[index];
+
+        if (Component) {
+          return <Component sectionId={id} />;
+        }
+
+        return null;
+      })}
     </>
   );
 }
