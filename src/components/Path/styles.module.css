@@ -1,0 +1,9 @@
+.path {
+  position: absolute;
+  /* height: 1438px; */
+  width: 100%;
+  max-width: 1400px;
+  top: 684px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}

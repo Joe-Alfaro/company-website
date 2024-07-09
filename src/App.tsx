@@ -2,6 +2,7 @@ import Section from "./components/Section";
 import "./App.css";
 import useContent from "./hooks/useContent";
 import Errors from "./components/Errors";
+import Path from "components/Path";
 
 const query = `
 {
@@ -57,6 +58,7 @@ function App() {
 
   return (
     <>
+      <Path />
       {sectionIds.map((id, index) => {
         const Component = Sections[index];
 

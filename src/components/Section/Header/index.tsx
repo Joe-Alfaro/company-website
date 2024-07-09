@@ -49,6 +49,24 @@ export default function Header({ sectionId }: Props): JSX.Element {
     return <Errors HeadingTag="h2" errors={errors} />;
   }
 
+  function Heading() {
+    if (!section?.heading) {
+      return null;
+    }
+
+    const description = section.heading.replace(
+      "love you.",
+      "<span>love you.</span>"
+    );
+
+    return (
+      <h1
+        className={css.headerTitle}
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+    );
+  }
+
   return (
     <section className={css.container}>
       <div className={css.contentWrapper}>
@@ -57,7 +75,7 @@ export default function Header({ sectionId }: Props): JSX.Element {
         </a>
         <div className={css.contentContainer}>
           <img className={css.tehlLogo} src="/tehlLogo.svg" alt="Tehl" />
-          <h1 className={css.headerTitle}>{section?.heading}</h1>
+          <Heading />
           <p className={css.headerText}>{section?.description}</p>
           <BookCallButton />
         </div>

@@ -120,7 +120,7 @@ export default function Benefits({ sectionId }: Props) {
   return (
     <section className={css.container}>
       <div>
-        <h2>{sectionData?.heading}</h2>
+        <h2 className={css.card}>{sectionData?.heading}</h2>
         <ol className={css.listContainer}>
           {contentIds?.map((contentId) => {
             /* data is out of order. Need to map over original list to maintain order from contentful */

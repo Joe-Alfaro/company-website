@@ -1,8 +1,8 @@
 .container {
-  max-width: 1400px;
+  max-width: 1304px;
 
-  margin: 0 auto 48px;
-  padding: 0 24px;
+  margin: 0 auto 16px;
+  padding: 0 48px;
 }
 
 .cardContainer {
@@ -13,6 +13,7 @@
 
   list-style: none;
 }
+
 .card {
   flex: 1 1 0px;
   max-width: 440px;
@@ -22,6 +23,8 @@
   border-radius: 8px;
 
   font-size: 18px;
+
+  background-color: #fbfbfb;
 }
 
 .card > h3 {
@@ -30,5 +33,5 @@
 }
 
 .imageArea {
-  min-height: 372px;
+  min-height: 360px;
 }

@@ -36,16 +36,29 @@ export default function Footer({ sectionId }: Props) {
 
   const { data } = useContent<SectionData>(query, { isLazy: false });
 
+  function Description() {
+    if (!data?.section.description) {
+      return null;
+    }
+
+    const description = data.section.description.replace(
+      "please book a call!",
+      "<b>please book a call!</b>"
+    );
+
+    return <p dangerouslySetInnerHTML={{ __html: description }} />;
+  }
+
   return (
     <footer className={css.container}>
       <div className={css.content}>
         <h2>{data?.section.heading}</h2>
-        <p>{data?.section.description}</p>
+        <Description />
         <BookCallButton hasHelperText={false} />
       </div>
       <ul className={css.socials}>
         <li>
-          <a href="">
+          <a href="https://www.linkedin.com/company/tehlsocial">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
         </li>

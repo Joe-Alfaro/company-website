@@ -1,7 +1,7 @@
 .container {
   display: flex;
   width: fit-content;
-  max-width: 1400px;
+  max-width: 1304px;
 
   margin: 0 auto -48px;
   padding: 0 24px;
@@ -25,19 +25,28 @@
 }
 
 .card {
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+
+  background-color: #fbfbfb;
+}
+
+h2.card {
+  padding: 24px 48px;
+  margin-right: 16px;
+}
+
+li.card {
   flex: 1 1 0px;
+
   padding: 48px 48px 120px 32px;
 
   counter-increment: item;
 
   font-size: 24px;
-
-  background-color: white;
-  border: 2px solid #dbdbdb;
-  border-radius: 4px;
 }
 
-.card:before {
+li.card:before {
   content: counter(item);
 
   display: block;
@@ -48,11 +57,11 @@
   color: #c2d7ff;
 }
 
-.card:hover {
-  border-color: #0d52ff;
+li.card:hover {
+  outline: 2px solid #0d52ff;
 }
 
-.card:hover:before {
+li.card:hover:before {
   color: #0d52ff;
 }
 

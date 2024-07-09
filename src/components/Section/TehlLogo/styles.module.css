@@ -3,9 +3,9 @@
   display: flex;
   justify-content: center;
 
-  max-width: 1400px;
+  max-width: 1304px;
 
-  margin: 0 auto 48px;
+  margin: 0 auto 112px;
   padding: 0 24px;
 
   font-size: 28px;
@@ -19,7 +19,7 @@
   width: 752px;
   height: 620px;
 
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 .leftHalf,

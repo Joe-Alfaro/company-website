@@ -40,6 +40,10 @@
   text-decoration: none;
 }
 
+.legalLinks {
+  font-size: 20px;
+}
+
 .container ul.legalLinks {
   gap: 0;
 }
