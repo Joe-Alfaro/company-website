@@ -116,7 +116,6 @@ export default function Benefits({ sectionId }: Props) {
     fetchContent();
   }, [contentIdsString]);
 
-  console.log(data);
   return (
     <section className={css.container}>
       <div>
