@@ -128,10 +128,10 @@ export default function Steps({ sectionId }: Props): JSX.Element {
     );
   }
   function TellYourCustomersImages() {
-    return <></>;
+    return <div />;
   }
   function UseYourFavoriteImage() {
-    return <></>;
+    return <div />;
   }
 
   const Images: Array<() => JSX.Element> = [
@@ -145,6 +145,11 @@ export default function Steps({ sectionId }: Props): JSX.Element {
       <ol className={css.cardContainer}>
         {data?.map((card, index) => {
           const Image = Images[index];
+
+          if (!Image) {
+            return null;
+          }
+
           return (
             <li className={css.card}>
               <h3>{card.heading}</h3>
