@@ -30,10 +30,6 @@
   font-size: 24px;
 
   color: white;
-
-  h1 {
-    margin-bottom: 0;
-  }
 }
 
 .tehlLogo {
@@ -43,6 +39,7 @@
 
 .headerTitle {
   font-size: 48px;
+  margin-bottom: 0;
 }
 
 .headerTitle span {
@@ -72,4 +69,54 @@
   position: absolute;
   right: 60px;
   top: 40px;
+}
+
+@media (max-width: 1120px) {
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 48px;
+  }
+
+  .contentContainer {
+    align-items: center;
+    text-align: center;
+
+    padding-top: 96px;
+    padding-bottom: 48px;
+  }
+
+  .tehlLogo {
+    max-width: 100%;
+  }
+
+  .appStoreButton {
+    position: static;
+    margin-bottom: 72px;
+  }
+
+  .appStoreButton img {
+    width: 192px;
+  }
+
+  .backgroundLogo {
+    position: static;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .screenGrab {
+    position: static;
+    height: auto;
+    width: 68%;
+    margin: -78% auto 96px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contentWrapper {
+    padding: 0 12px;
+  }
 }

@@ -72,3 +72,40 @@ li.card:hover:before {
 
   object-fit: cover;
 }
+
+@media (max-width: 1080px) {
+  .container {
+    display: block;
+    width: auto;
+  }
+  .container h2 {
+    margin-top: 36px;
+    margin-bottom: -116px;
+  }
+
+  .listContainer {
+    flex-direction: column;
+
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+
+    width: 100%;
+    background-color: #fbfbfb;
+    padding-top: 124px;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .card {
+    border: none;
+  }
+
+  li.card {
+    padding-top: 0;
+    padding-bottom: 16px;
+  }
+
+  .image {
+    display: none;
+  }
+}

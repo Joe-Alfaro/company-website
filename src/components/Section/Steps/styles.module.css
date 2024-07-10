@@ -2,7 +2,7 @@
   max-width: 1304px;
 
   margin: 0 auto 16px;
-  padding: 0 48px;
+  padding: 0 24px;
 }
 
 .cardContainer {
@@ -34,4 +34,14 @@
 
 .imageArea {
   min-height: 360px;
+}
+
+@media (max-width: 800px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: none;
+  }
 }
