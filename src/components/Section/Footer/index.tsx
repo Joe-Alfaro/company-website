@@ -63,12 +63,12 @@ export default function Footer({ sectionId }: Props) {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="https://www.instagram.com/tehl.social">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="https://www.facebook.com/tehl.social">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </a>
         </li>

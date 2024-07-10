@@ -64,11 +64,14 @@
 }
 
 .appStoreButton {
-  height: 40px;
   width: auto;
   position: absolute;
   right: 60px;
   top: 40px;
+}
+
+.appStoreButton img {
+  height: 40px;
 }
 
 @media (max-width: 1120px) {

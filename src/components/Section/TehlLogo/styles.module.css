@@ -32,12 +32,24 @@
   left: 0;
 }
 
+.leftHalf {
+  transform: translate3d(-44px, 0, 0);
+}
+
 .rightHalf {
   flex-direction: row-reverse;
   text-align: right;
 
   top: 180px;
-  left: 24px;
+  left: 0;
+
+  transform: translate3d(44px, 0, 0);
+}
+
+.leftHalf > img,
+.rightHalf > img {
+  width: 56%;
+  height: auto;
 }
 
 .leftHalf > p,
@@ -59,6 +71,7 @@
 }
 
 .stock {
+  width: 10%;
   position: absolute;
   z-index: 0;
 }
@@ -88,9 +101,16 @@
     display: none;
   }
 
+  .leftHalf {
+    transform: translate3d(10%, 0, 0);
+  }
+  .rightHalf {
+    transform: translate3d(-10%, 0, 0);
+  }
+
   .leftHalf img,
   .rightHalf img {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -101,30 +121,42 @@
 
   .tehlLogo {
     height: auto;
+    max-width: none;
   }
 
   .leftHalf,
   .rightHalf {
     position: static;
+    align-items: center;
   }
 
-  .leftHalf {
-    flex-direction: column-reverse;
+  .leftHalf p,
+  .rightHalf p {
+    max-width: none;
+    text-align: center;
   }
 
   .rightHalf {
     flex-direction: column;
-    margin-top: -28%;
+    margin-top: -20%;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .leftHalf {
+    flex-direction: column-reverse;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .leftHalf img,
+  .rightHalf img {
+    width: 50%;
   }
 
   .rightHalf img {
-    margin-left: 48%;
+    transform: translate3d(50%, -10%, 0);
   }
 
-  .rightHalf p,
-  .leftHalf p {
-    max-width: none;
-    text-align: center;
-    margin: 0;
+  .leftHalf img {
+    transform: translate3d(-50%, 0, 0);
   }
 }

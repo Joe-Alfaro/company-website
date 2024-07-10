@@ -113,11 +113,11 @@ export default function Header({ sectionId }: Props): JSX.Element {
     <section className={css.container}>
       <div className={css.tehlLogo}>
         <div className={css.leftHalf}>
-          <img src="/tehlLogoLeft.svg" />
+          <img src="/tehlLogoLeft.png" />
           <p>{content?.[0].text}</p>
         </div>
         <div className={css.rightHalf}>
-          <img src="/tehlLogoRight.svg" />
+          <img src="/tehlLogoRight.png" />
           <p>{content?.[1].text}</p>
         </div>
       </div>

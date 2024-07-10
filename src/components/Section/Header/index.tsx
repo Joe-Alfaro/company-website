@@ -94,7 +94,12 @@ export default function Header({ sectionId }: Props): JSX.Element {
           <p className={css.headerText}>{section?.description}</p>
           <BookCallButton />
         </div>
-        <a href="#" className={css.appStoreButton}>
+        <a
+          href="https://apps.apple.com/us/app/tehl/id6480064756"
+          rel="noopener noreferrer"
+          target="_blank"
+          className={css.appStoreButton}
+        >
           <img src="/appStore.svg" alt="Download on the Apple App Store" />
         </a>
         <img
