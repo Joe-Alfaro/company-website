@@ -96,16 +96,65 @@ export default function Steps({ sectionId }: Props): JSX.Element {
     fetchContent();
   }, [contentIdsString]);
 
+  function CardText({ text }: { text: string }) {
+    const cardText = text.replace(
+      "receive the reward",
+      "<span>receive the reward</span>"
+    );
+    return (
+      <p
+        className={css.cardText}
+        dangerouslySetInnerHTML={{ __html: cardText }}
+      />
+    );
+  }
+
+  function CreateAnOfferImages() {
+    return (
+      <>
+        <div className={css.backgroundCard} />
+        <div className={css.mainCard}>
+          <img className={css.brandLogo} src="/tapInLogo.svg" />
+          <p className={css.spotsLeft}>29 spots available</p>
+          <p className={css.offer}>25 off</p>
+          <p className={css.description}>
+            Record a reel of the Tap In Lounge and receive $20 off your next
+            order
+          </p>
+        </div>
+        <img className={css.tehlLogo} src="/tehlCircleLogo.svg" />
+        <img className={css.stock} src="/stock5.png" />
+      </>
+    );
+  }
+  function TellYourCustomersImages() {
+    return <></>;
+  }
+  function UseYourFavoriteImage() {
+    return <></>;
+  }
+
+  const Images: Array<() => JSX.Element> = [
+    CreateAnOfferImages,
+    TellYourCustomersImages,
+    UseYourFavoriteImage,
+  ];
+
   return (
     <section className={css.container}>
       <ol className={css.cardContainer}>
-        {data?.map((card) => (
-          <li className={css.card}>
-            <h3>{card.heading}</h3>
-            <div className={css.imageArea}></div>
-            <p>{card.text}</p>
-          </li>
-        ))}
+        {data?.map((card, index) => {
+          const Image = Images[index];
+          return (
+            <li className={css.card}>
+              <h3>{card.heading}</h3>
+              <div className={css.imageArea}>
+                <Image />
+              </div>
+              <CardText text={card.text} />
+            </li>
+          );
+        })}
       </ol>
     </section>
   );
