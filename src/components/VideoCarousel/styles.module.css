@@ -1,0 +1,12 @@
+.carousel {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.blur { filter: blur(4px);
+

@@ -1,6 +1,8 @@
 import useContent from "hooks/useContent";
 import { useEffect, useMemo } from "react";
 import css from "./styles.module.css";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 interface Props {
   sectionId: string;
@@ -128,10 +130,34 @@ export default function Steps({ sectionId }: Props): JSX.Element {
     );
   }
   function TellYourCustomersImages() {
-    return <div />;
+    return (
+      <div className={css.tellYourCustomers}>
+        <img className={css.instructions} src="/instructionCard.png" />
+        <img className={css.instagramPost} src="/instagramPost.png" />
+      </div>
+    );
   }
   function UseYourFavoriteImage() {
-    return <div />;
+    const videos = [];
+    for (let i = 0; i < 6; i++) {
+      videos.push(`/favoritePosts${i + 1}.mp4`);
+    }
+
+    return (
+      <Carousel
+        autoPlay
+        axis="horizontal"
+        interval={8000}
+        showThumbs={false}
+        showStatus={false}
+        showArrows={false}
+        showIndicators={false}
+      >
+        {videos.map((video) => (
+          <video className={css.video} key={video} src={video} autoPlay muted />
+        ))}
+      </Carousel>
+    );
   }
 
   const Images: Array<() => JSX.Element> = [

@@ -78,7 +78,8 @@ li.card:hover:before {
     display: block;
     width: auto;
   }
-  .container h2 {
+
+  h2.card {
     margin-top: 36px;
     margin-bottom: -116px;
   }
@@ -107,5 +108,11 @@ li.card:hover:before {
 
   .image {
     display: none;
+  }
+}
+@media (max-width: 408px) {
+  h2.card {
+    margin-top: 36px;
+    margin-bottom: -140px;
   }
 }

@@ -186,6 +186,40 @@
 /* END */
 /* Create and Offer */
 
+/* Tell your customers */
+/* BEGIN */
+
+.tellYourCustomers {
+  display: flex;
+  flex-direction: column;
+}
+
+.instagramPost,
+.instructions {
+  width: 60%;
+}
+
+.instructions {
+  align-self: flex-end;
+}
+
+.instagramPost {
+  margin-top: -60%;
+}
+
+/* END */
+/* Tell your customers*/
+
+/* Use your favorite posts */
+/* BEGIN */
+
+.video {
+  width: 64%;
+}
+
+/* END */
+/* Use your favorite posts */
+
 @media (max-width: 800px) {
   .cardContainer {
     flex-direction: column;
