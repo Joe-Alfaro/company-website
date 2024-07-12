@@ -78,6 +78,12 @@ function App() {
     );
   }
 
+  function NotFound() {
+    window.location.replace("/");
+
+    return null;
+  }
+
   return (
     <BrowserRouter>
       <Routes>
@@ -86,6 +92,7 @@ function App() {
         <Route path="/privacy-policy.html" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/terms-conditions.html" element={<TermsConditions />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
