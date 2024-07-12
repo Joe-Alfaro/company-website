@@ -1,8 +1,13 @@
+"use client";
+
 import Section from "./components/Section";
 import "./App.css";
 import useContent from "./hooks/useContent";
 import Errors from "./components/Errors";
 import Path from "components/Path";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PrivacyPolicy from "components/staticPages/PrivacyPolicy";
+import TermsConditions from "components/staticPages/TermsConditions";
 
 const query = `
 {
@@ -56,19 +61,33 @@ function App() {
     Section.Footer,
   ] as const;
 
+  function HomePage() {
+    return (
+      <>
+        <Path />
+        {sectionIds?.map((id, index) => {
+          const Component = Sections[index];
+
+          if (Component) {
+            return <Component sectionId={id} />;
+          }
+
+          return null;
+        })}
+      </>
+    );
+  }
+
   return (
-    <>
-      <Path />
-      {sectionIds.map((id, index) => {
-        const Component = Sections[index];
-
-        if (Component) {
-          return <Component sectionId={id} />;
-        }
-
-        return null;
-      })}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy.html" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/terms-conditions.html" element={<TermsConditions />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

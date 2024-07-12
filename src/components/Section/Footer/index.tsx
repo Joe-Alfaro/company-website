@@ -75,10 +75,10 @@ export default function Footer({ sectionId }: Props) {
       </ul>
       <ul className={css.legalLinks}>
         <li>
-          <a href={""}>Privacy Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
         </li>
         <li>
-          <a href={""}>Terms & Conditions</a>
+          <a href="/terms-conditions">Terms & Conditions</a>
         </li>
       </ul>
     </footer>
